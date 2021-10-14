@@ -12,6 +12,4 @@
     padding: 40px 50px;
     margin: 20px 0;
   }
-
-
 </style>
