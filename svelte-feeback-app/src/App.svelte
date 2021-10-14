@@ -3,12 +3,37 @@ let firstName = 'Luke';
 let lastName = 'Usher';
 let color = 'blue';
 let showText = false;
+let users = [
+	{
+		id: '1',
+		name: 'John'
+	},
+	
+	{
+		id: '2',
+		name: 'James'
+	},
+	
+	{
+		id: '3',
+		name: 'Jimmy'
+	}
+	,
+	
+	{
+		id: '4',
+		name: 'Jeff'
+	}
+]
+
+
 
 $: name = firstName + ' ' + lastName
 
 const toggle = () => {
 color = color === 'blue' ? 'red' : 'blue'
 showText = !showText
+users = [...users, {id: '5', name: 'Jen'}]
 }
 </script>
 
@@ -21,6 +46,10 @@ showText = !showText
 		<p>NO TEXT</p>
 	{/if}
 	<button on:click={toggle}>Click</button>
+
+	{#each users as user (user.id)}
+		<h3>{user.id}: {user.name}</h3>
+	{/each}
 </main>
 
 <style>
