@@ -7,5 +7,5 @@ export let feedback = [];
 </script>
 
 {#each feedback as feedbackRecord (feedbackRecord.id)}
-  <FeedbackItem item={feedbackRecord} />
+  <FeedbackItem item={feedbackRecord} on:delete-feedback />
 {/each}
