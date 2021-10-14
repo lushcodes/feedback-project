@@ -1,8 +1,9 @@
 <script>
-
-
+export let feedback = [];
 
 
 </script>
 
-FeedbackList
+{#each feedback as feedbackRecord (feedbackRecord.id)}
+  <h3>{feedbackRecord.text}</h3>
+{/each}
