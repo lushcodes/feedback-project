@@ -1,9 +1,11 @@
 <script>
+
+import FeedbackItem from "./FeedbackItem.svelte";
 export let feedback = [];
 
 
 </script>
 
 {#each feedback as feedbackRecord (feedbackRecord.id)}
-  <h3>{feedbackRecord.text}</h3>
+  <FeedbackItem item={feedbackRecord} />
 {/each}
